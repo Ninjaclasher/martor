@@ -1,9 +1,5 @@
 import markdown
-
-try:
-    from django.contrib.staticfiles.templatetags.staticfiles import static
-except ModuleNotFoundError:
-    from django.templatetags.static import static
+from django.templatetags.static import static
 
 from ..settings import (MARTOR_MARKDOWN_BASE_EMOJI_URL,
                         MARTOR_MARKDOWN_BASE_EMOJI_USE_STATIC)
