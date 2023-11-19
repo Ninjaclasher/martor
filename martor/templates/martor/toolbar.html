@@ -52,10 +52,12 @@
     <div class="ui icon button no-border markdown-selector markdown-image-link" title="{% trans 'Insert Image Link' %} (Ctrl+Shift+I)">
       <i class="image icon"></i>
     </div>
-    <div class="ui icon button no-border markdown-selector markdown-image-upload" title="{% trans 'Upload an Image' %}">
-      <i class="upload icon"></i>
-      <input name="markdown-image-upload" class="button" type="file" accept="image/*" title="{% trans 'Upload an Image' %}">
-    </div>
+    {% if request.user.is_staff %}
+      <div class="ui icon button no-border markdown-selector markdown-image-upload" title="{% trans 'Upload an Image' %}">
+        <i class="upload icon"></i>
+        <input name="markdown-image-upload" class="button" type="file" accept="image/*" title="{% trans 'Upload an Image' %}">
+      </div>
+    {% endif %}
     <div class="ui icon button no-border markdown-selector markdown-emoji" title="{% trans 'Insert Emoji' %}">
       <i class="heart icon"></i>
     </div>
