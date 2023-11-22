@@ -12,6 +12,7 @@ from .settings import (
 
 
 class MartorWidget(forms.Textarea):
+    UPLOADS_ENABLED = False
 
     def render(self, name, value, attrs=None, renderer=None, **kwargs):
         # Make the settings the default attributes to pass
@@ -47,7 +48,8 @@ class MartorWidget(forms.Textarea):
             'martor': widget,
             'field_name': name,
             'emoji_enabled': emoji_enabled,
-            'mentions_enabled': mentions_enabled
+            'mentions_enabled': mentions_enabled,
+            'uploads_enabled': self.UPLOADS_ENABLED,
         })
 
     class Media:
