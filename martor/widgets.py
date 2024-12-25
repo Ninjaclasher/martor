@@ -69,6 +69,7 @@ class MartorWidget(forms.Textarea):
             'plugins/js/mode-markdown.js',
             'plugins/js/ext-language_tools.js',
             'plugins/js/theme-github.js',
+            'plugins/js/theme-twilight.js',
             'plugins/js/highlight.min.js',
             'plugins/js/resizable.min.js',
             'plugins/js/emojis.min.js',
